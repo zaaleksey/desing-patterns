@@ -1,4 +1,4 @@
-package Product.Cider;
+package AbstractFactory.Product.Cider;
 
 public class BelgianCider implements Cider {
 

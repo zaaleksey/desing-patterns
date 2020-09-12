@@ -1,11 +1,11 @@
-package Factory;
+package AbstractFactory.Factory;
 
-import Product.Ale.Ale;
-import Product.Ale.BelgianAle;
-import Product.Beer.Beer;
-import Product.Beer.BelgianBeer;
-import Product.Cider.BelgianCider;
-import Product.Cider.Cider;
+import AbstractFactory.Product.Ale.Ale;
+import AbstractFactory.Product.Ale.BelgianAle;
+import AbstractFactory.Product.Beer.Beer;
+import AbstractFactory.Product.Beer.BelgianBeer;
+import AbstractFactory.Product.Cider.BelgianCider;
+import AbstractFactory.Product.Cider.Cider;
 
 public class BelgianDrinkFactory implements DrinkFactory {
 

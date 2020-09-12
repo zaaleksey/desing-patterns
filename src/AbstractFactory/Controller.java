@@ -1,7 +1,9 @@
-import Factory.DrinkFactory;
-import Product.Ale.Ale;
-import Product.Beer.Beer;
-import Product.Cider.Cider;
+package AbstractFactory;
+
+import AbstractFactory.Factory.DrinkFactory;
+import AbstractFactory.Product.Ale.Ale;
+import AbstractFactory.Product.Beer.Beer;
+import AbstractFactory.Product.Cider.Cider;
 
 public class Controller {
 

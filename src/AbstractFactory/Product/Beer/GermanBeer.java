@@ -1,4 +1,4 @@
-package Product.Beer;
+package AbstractFactory.Product.Beer;
 
 public class GermanBeer implements Beer {
 

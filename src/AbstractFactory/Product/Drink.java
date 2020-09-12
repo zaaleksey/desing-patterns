@@ -1,4 +1,4 @@
-package Product;
+package AbstractFactory.Product;
 
 public interface Drink {
 

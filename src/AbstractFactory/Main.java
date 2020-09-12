@@ -1,5 +1,7 @@
-import Factory.BelgianDrinkFactory;
-import Factory.GermanDrinkFactory;
+package AbstractFactory;
+
+import AbstractFactory.Factory.BelgianDrinkFactory;
+import AbstractFactory.Factory.GermanDrinkFactory;
 
 public class Main {
 

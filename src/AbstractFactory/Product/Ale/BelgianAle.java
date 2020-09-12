@@ -1,4 +1,4 @@
-package Product.Ale;
+package AbstractFactory.Product.Ale;
 
 public class BelgianAle implements Ale {
 
