@@ -3,10 +3,13 @@ package Singleton;
 public class Clock {
 
   private static Clock instance = null;
+
   private double time;
 
   private Clock() {
+    System.out.println("Точка создания времени");
     this.time = 0;
+    showTime();
   }
 
   public static Clock getInstance() {
