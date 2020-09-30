@@ -14,7 +14,7 @@ public class Main {
 
     System.out.println("Восстанавливаем историю редактора:");
     System.out.println("-".repeat(50));
-    for (EditorMemento memento : editor.mementos) {
+    for (EditorMemento memento : EditorMemento.mementos) {
       System.out.println(memento.getContent());
     }
   }

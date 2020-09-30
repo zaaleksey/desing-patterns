@@ -6,11 +6,9 @@ import java.util.List;
 public class Editor {
 
   private String content;
-  public List<EditorMemento> mementos;
 
   public Editor(String content) {
     this.content = content;
-    this.mementos = new LinkedList<>();
   }
 
   public EditorMemento saveState() {
@@ -27,7 +25,7 @@ public class Editor {
 
   public void setContent(String content) {
     this.content = content;
-    mementos.add(saveState());
+    EditorMemento.mementos.add(saveState());
   }
 
 }
