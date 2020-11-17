@@ -1,5 +1,7 @@
 package Strategy;
 
+import Strategy.Entities.General;
+
 public class Sorter {
 
     private Sort algorithm = null;
@@ -12,7 +14,7 @@ public class Sorter {
         this.algorithm = algorithm;
     }
 
-    public void sort(int[] arr) {
+    public void sort(General[] arr) {
         algorithm.sort(arr);
     }
 }

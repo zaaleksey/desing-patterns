@@ -1,5 +1,8 @@
 package Strategy;
 
+import Strategy.Entities.Man;
+import Strategy.Entities.Orange;
+
 public class Main {
 
     // TODO: сделать общий интерфейс для объектов, чтобы можно было сравнивать и сортировать разные классы
@@ -12,20 +15,37 @@ public class Main {
 
         System.out.println("Bubble");
         sorter.setAlgorithm(bubbleSort);
-        sortTimer(sorter);
+
+        sorter.sort(new Man[]{
+            new Man("Jim", 27),
+            new Man("Stan", 21),
+            new Man("John", 25)
+        });
+
+        sorter.sort(new Orange[]{
+            new Orange("3", true, 23),
+            new Orange("1", false, 2.001),
+            new Orange("2", true, 5.212),
+            new Orange("5", true, 33),
+            new Orange("4", false, 25)
+        });
 
         System.out.println("-".repeat(50));
 
         System.out.println("Selection");
         sorter.setAlgorithm(selectionSort);
-        sortTimer(sorter);
-    }
+        sorter.sort(new Man[]{
+            new Man("Jim", 27),
+            new Man("Stan", 21),
+            new Man("John", 25)
+        });
 
-    public static void sortTimer(Sorter sorter) {
-        long start = System.currentTimeMillis();
-        sorter.sort(new int[]{12, 424, 13, 1, 132, 9, 42, 2, 6, 100, 11, 105, 353, 333, 14, 1010, 94});
-        long total = System.currentTimeMillis() - start;
-        System.out.println("Время сортировки: " + total + "ms");
+        sorter.sort(new Orange[]{
+            new Orange("3", true, 23),
+            new Orange("1", false, 2.001),
+            new Orange("2", true, 5.212),
+            new Orange("5", true, 33),
+            new Orange("4", false, 25)
+        });
     }
-
 }

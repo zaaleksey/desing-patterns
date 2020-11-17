@@ -1,7 +1,9 @@
 package Strategy;
 
+import Strategy.Entities.General;
+
 public interface Sort {
 
-    void sort(int[] arr);
+    void sort(General[] arr);
 
 }
