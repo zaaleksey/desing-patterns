@@ -12,9 +12,9 @@ public class App {
     Forest forest = new Forest();
     for (int i = 0; i < Math.floor(TREES_TO_DRAW / TREE_TYPES); i++) {
       forest.plantTree(random(0, CANVAS_SIZE), random(0, CANVAS_SIZE),
-          "Summer Oak", Color.GREEN, "Oak texture stub");
+          "Summer Oak", Color.GREEN);
       forest.plantTree(random(0, CANVAS_SIZE), random(0, CANVAS_SIZE),
-          "Autumn Oak", Color.ORANGE, "Autumn Oak texture stub");
+          "Autumn Oak", Color.ORANGE);
     }
     forest.setSize(CANVAS_SIZE, CANVAS_SIZE);
     forest.setVisible(true);
