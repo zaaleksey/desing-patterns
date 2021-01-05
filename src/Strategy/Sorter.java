@@ -1,6 +1,7 @@
 package Strategy;
 
 import Strategy.Entities.General;
+import java.util.List;
 
 public class Sorter {
 
@@ -14,7 +15,7 @@ public class Sorter {
         this.algorithm = algorithm;
     }
 
-    public void sort(General[] arr) {
-        algorithm.sort(arr);
+    public void sort(List<General> list) {
+        algorithm.sort(list);
     }
 }

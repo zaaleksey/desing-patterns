@@ -1,11 +1,13 @@
 package Strategy;
 
+import Strategy.Entities.General;
 import Strategy.Entities.Man;
-import Strategy.Entities.Orange;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Main {
 
-    // TODO: сделать общий интерфейс для объектов, чтобы можно было сравнивать и сортировать разные классы
     public static void main(String[] args) {
 
         Sort bubbleSort = new BubbleSort();
@@ -13,39 +15,44 @@ public class Main {
 
         Sorter sorter = new Sorter(null);
 
-        System.out.println("Bubble");
-        sorter.setAlgorithm(bubbleSort);
+        System.out.println("-".repeat(50));
+        sorter.setAlgorithm(selectionSort);
 
-        sorter.sort(new Man[]{
-            new Man("Jim", 27),
-            new Man("Stan", 21),
-            new Man("John", 25)
-        });
+        System.out.println("Selection (ArrayList)");
+        sorter.sort(getArrayManList());
 
-        sorter.sort(new Orange[]{
-            new Orange("3", true, 23),
-            new Orange("1", false, 2.001),
-            new Orange("2", true, 5.212),
-            new Orange("5", true, 33),
-            new Orange("4", false, 25)
-        });
+        System.out.println("Selection (LinkedList)");
+        sorter.sort(getLinkedManList());
+
 
         System.out.println("-".repeat(50));
+        sorter.setAlgorithm(bubbleSort);
 
-        System.out.println("Selection");
-        sorter.setAlgorithm(selectionSort);
-        sorter.sort(new Man[]{
-            new Man("Jim", 27),
-            new Man("Stan", 21),
-            new Man("John", 25)
-        });
+        System.out.println("Bubble (ArrayList)");
+        sorter.sort(getArrayManList());
 
-        sorter.sort(new Orange[]{
-            new Orange("3", true, 23),
-            new Orange("1", false, 2.001),
-            new Orange("2", true, 5.212),
-            new Orange("5", true, 33),
-            new Orange("4", false, 25)
-        });
+        System.out.println("Bubble (LinkedList)");
+        sorter.sort(getLinkedManList());
+
+    }
+
+    public static List<General> getArrayManList() {
+        List<General> man = new ArrayList<>();
+        man.add(new Man("Jim", 27));
+        man.add(new Man("Stan", 66));
+        man.add(new Man("John", 45));
+        man.add(new Man("Sven", 25));
+        man.add(new Man("Sam", 12));
+        return man;
+    }
+
+    public static List<General> getLinkedManList() {
+        List<General> man = new LinkedList<>();
+        man.add(new Man("Jim", 27));
+        man.add(new Man("Stan", 66));
+        man.add(new Man("John", 45));
+        man.add(new Man("Sven", 25));
+        man.add(new Man("Sam", 12));
+        return man;
     }
 }

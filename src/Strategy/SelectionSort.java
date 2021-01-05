@@ -1,24 +1,30 @@
 package Strategy;
 
 import Strategy.Entities.General;
-import java.util.Arrays;
+import java.util.List;
 
 public class SelectionSort implements Sort {
 
     @Override
-    public void sort(General[] arr) {
+    public void sort(List<General> list) {
         General temp = null;
-        for (int left = 0; left < arr.length; left++) {
+        for (int left = 0; left < list.size(); left++) {
             int ind = left;
-            for (int i = left; i < arr.length; i++) {
-                if (arr[i].criterion() < arr[ind].criterion()) {
+            for (int i = left; i < list.size(); i++) {
+                if (list.get(i).criterion() < list.get(ind).criterion()) {
                     ind = i;
                 }
             }
-            temp = arr[left];
-            arr[left] = arr[ind];
-            arr[ind] = temp;
+
+            temp = list.get(left);
+
+            list.add(left, list.get(ind));
+            list.remove(left + 1);
+
+            list.add(ind, temp);
+            list.remove(ind + 1);
         }
-        System.out.println(Arrays.toString(arr));
+
+        System.out.println(list.toString());
     }
 }

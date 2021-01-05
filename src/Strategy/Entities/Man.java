@@ -12,7 +12,7 @@ public class Man implements General {
 
   @Override
   public String toString() {
-    return this.name;
+    return this.name + " - " + this.age;
   }
 
   @Override
